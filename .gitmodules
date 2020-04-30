@@ -1,0 +1,3 @@
+[submodule "pds-doi-service"]
+	path = pds-doi-service
+	url = https://github.com/NASA-PDS-Incubator/pds-doi-service/
