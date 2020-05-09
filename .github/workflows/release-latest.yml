@@ -27,3 +27,8 @@ jobs:
     - name: generate summary
       run: |
         summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
+    - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
