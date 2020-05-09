@@ -1,15 +1,15 @@
 [submodule "pds-doi-service"]
 	path = pds-doi-service
-	url = https://github.com/NASA-PDS-Incubator/pds-doi-service/
+	url = https://github.com/NASA-PDS/pds-doi-service/
 
 [submodule "pds-registry-app"]
     path = pds-registry-app
-    url = https://github.com/NASA-PDS-Incubator/pds-registry-app/
+    url = https://github.com/NASA-PDS/pds-registry-app/
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
-    url = https://github.com/NASA-PDS-Incubator/pds-deep-archive
+    url = https://github.com/NASA-PDS/pds-deep-archive
 
 [submodule "validate"]
     path = validate
-    url = https://github.com/NASA-PDS-Incubator/validate/
+    url = https://github.com/NASA-PDS/validate/
