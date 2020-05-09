@@ -25,17 +25,17 @@ jobs:
       run: |
         pip install .
     - uses: actions/checkout@v2
-       with:
-         ref: gh-pages
+      with:
+        ref: gh-pages
     - name: generate summary
       run: |
         summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
-     - name: Commit SUMMARY.md file
-       run: |
-         git config --local user.email "action@github.com"
-         git config --local user.name "GitHub Action"
-         git add SUMMARY.md
-         git commit -m "update summary" --allow-empty
+    - name: Commit SUMMARY.md file
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add SUMMARY.md
+        git commit -m "update summary" --allow-empty
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
