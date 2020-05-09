@@ -26,4 +26,4 @@ jobs:
         pip install .
     - name: generate summary
       run: |
-        summary --token ${{ secrets.GITHUB_TOKEN }} SUMMARY
+        summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
