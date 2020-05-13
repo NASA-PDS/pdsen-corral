@@ -10,8 +10,8 @@ Software Summary
 |validate|v1.23.0|[:footprints:](http://nasa-pds.github.io/validate/CHANGELOG.html#v1230-2020-05-08)|
 
 
-# PDS-DOI-SERVICE
+## PDS-DOI-SERVICE
 
 dfgfdgffghfgh
 
-[:footprints:](http://nasa-pds.github.io/validate/CHANGELOG.html#v1230-2020-05-08)
+[:footprints:](http://nasa-pds.github.io/validate/CHANGELOG.html#v1230-2020-05-08) [:scroll](http://nasa-pds.github.io/validate/CHANGELOG.html#v1230-2020-05-08)
