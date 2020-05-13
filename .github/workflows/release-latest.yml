@@ -28,8 +28,8 @@ jobs:
       run: |
         summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
     - uses: actions/checkout@v2
-        with:
-          ref: gh-pages
+      with:
+        ref: gh-pages
     - name: Commit SUMMARY.md file
       run: |
         git config --local user.email "action@github.com"
