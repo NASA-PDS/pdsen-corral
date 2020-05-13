@@ -24,12 +24,12 @@ jobs:
     - name: deploy util script
       run: |
         pip install .
-    - name: generate summary
-      run: |
-        summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
     - uses: actions/checkout@v2
       with:
         ref: gh-pages
+    - name: generate summary
+      run: |
+        summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
     - name: Commit SUMMARY.md file
       run: |
         git config --local user.email "action@github.com"
