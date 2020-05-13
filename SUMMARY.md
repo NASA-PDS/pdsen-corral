@@ -12,7 +12,7 @@ Software Summary
 
 ## PDS-DOI-SERVICE
 
-| PDS-DOI-SERVICE ||
-| :---: ||
-|dfgfdgffghfgh ||
+| PDS-DOI-SERVICE | |
+| :---: | |
+|dfgfdgffghfgh | |
 |[:footprints:](http://nasa-pds.github.io/validate/CHANGELOG.html#v1230-2020-05-08 "CHANGELOG")  | [:scroll:](http://nasa-pds.github.io/validate/CHANGELOG.html#v1230-2020-05-08 "LICENCE") |
