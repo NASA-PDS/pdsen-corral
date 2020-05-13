@@ -1,35 +1,35 @@
-import requests
-from bs4 import BeautifulSoup
+import os
+import logging
+from configparser import ConfigParser
 from mdutils import MdUtils
+from pdsen_corral.cattle_head import cattleHead
 
-from pdsen_corral.versions import grab_latest_versions
-
-
-def get_changelog_signet(changelog_url):
-    headers = requests.utils.default_headers()
-    changelog = requests.get(changelog_url, headers)
-    soup = BeautifulSoup(changelog.content, 'html.parser')
-    changelog_signets = {}
-    for h2 in soup.find_all('h2'):
-        changelog_signets[h2.find("a").text] = "#".join([changelog_url, h2.get('id')])
-
-    return changelog_signets
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
-def write_build_summary(token, output_file_name, dev=False):
+def gather_the_herd(dev, token):
+    logger.info('gather the herd of submodules listed in .gitmodule')
+    config = ConfigParser()
+    config.read(os.path.join(os.getcwd(), ".gitmodules"))
 
-    repo_latest_versions = grab_latest_versions(token, dev=dev)
+    herd = {}
+    for section in config.sections():
+        module_name = section.split(" ")[1].strip('"')
+        herd[module_name] = cattleHead(module_name,
+                                       config.get(section, "url").strip("/"),
+                                       config.get(section, "description").strip("/"),
+                                       dev=dev,
+                                       token=token)
+    return herd
+
+
+def write_build_summary(output_file_name, token=None, dev=False):
+
     software_summary_md = MdUtils(file_name=output_file_name, title="Software Summary")
 
-    table = ["tool", "version", "changelog"]
-    nrow = 1
-    for repo,vers in repo_latest_versions.items():
-        changelog_signets = get_changelog_signet(f"http://nasa-pds.github.io/{repo}/CHANGELOG.html")
-        changelog_link = f"[:footprints:]({changelog_signets[vers]})"
-        table.extend([repo, vers, changelog_link])
-        nrow += 1
-
-    software_summary_md.new_line()
-    software_summary_md.new_table(columns=3, rows=nrow, text=table, text_align='center')
+    herd = gather_the_herd(dev, token)
+    for k, v in herd.items():
+        v.write(software_summary_md)
 
     software_summary_md.create_md_file()

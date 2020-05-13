@@ -15,7 +15,7 @@ def main():
                         help='if present we search for dev versions, otherwise stable versions are returned')
     args = parser.parse_args()
 
-    write_build_summary(args.token, args.output, dev=args.dev)
+    write_build_summary(args.output, token=args.token, dev=args.dev)
 
 
 if __name__ == "__main__":
