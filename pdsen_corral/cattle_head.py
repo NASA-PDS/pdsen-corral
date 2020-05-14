@@ -45,7 +45,7 @@ class cattleHead():
 
     def _get_cell(self, function):
         link_func = eval(f'self._get_{function}_link()')
-        return f'[!["{function}"]({self._icon_dict[function]} =20x20)]({link_func} "{function}")'
+        return f'[![icon]({self._icon_dict[function]})]({link_func} "{function}")'
 
     def _get_download_link(self):
         return f'https://github.com/NASA-PDS/{self._repo_name}/releases/tag/{self._version}'
