@@ -29,7 +29,7 @@ jobs:
         ref: gh-pages
     - name: generate summary
       run: |
-        summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY
+        summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY --dev
     - name: Commit SUMMARY.md file
       run: |
         git config --local user.email "action@github.com"
