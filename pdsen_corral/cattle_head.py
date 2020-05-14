@@ -37,8 +37,8 @@ class cattleHead():
     def write(self, mdutil_file):
         mdutil_file.new_header(level=1, title=f'{self._name} ({self._version})')
         mdutil_file.new_paragraph(self._description)
-        mdutil_file.new_line('')
-        mdutil_file.new_line('')
+        mdutil_file.new_line('&nbsp;')
+        mdutil_file.new_line('&nbsp;')
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
         mdutil_file.write(f'[:floppy_disk:](http://www.google.com "DOWNLOAD")')
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
@@ -55,9 +55,9 @@ class cattleHead():
         mdutil_file.write(f'[:scroll:](http://www.google.com "LICENSE")')
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
         mdutil_file.write(f'[:pencil:](http://www.google.com "FEEDBACK")')
-        mdutil_file.new_line('')
-        mdutil_file.new_line('')
-        mdutil_file.new_line('')
+        mdutil_file.new_line('&nbsp;')
+        mdutil_file.new_line('&nbsp;')
+        mdutil_file.new_line('&nbsp;')
 
     def _get_changelog_signet(self):
         headers = requests.utils.default_headers()
