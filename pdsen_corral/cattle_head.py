@@ -38,6 +38,7 @@ class cattleHead():
         mdutil_file.new_header(level=1, title=f'{self._name} ({self._version})')
         mdutil_file.new_paragraph(self._description)
         mdutil_file.new_line()
+        mdutil_file.new_line()
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
         mdutil_file.write(f'[:floppy_disk:](http://www.google.com "DOWNLOAD")')
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
@@ -49,12 +50,14 @@ class cattleHead():
         else:
             mdutil_file.write(f'[:footprints:](https://www.gnupg.org/gph/en/manual/r1943.html "CHANGELOG")')
 
-        mdutil_file.write(f'[:unicor:](http://www.google.com "REQUIREMENTS")')
+        mdutil_file.write(f'[:unicorn:](http://www.google.com "REQUIREMENTS")')
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
         mdutil_file.write(f'[:scroll:](http://www.google.com "LICENSE")')
         mdutil_file.write("&nbsp;&nbsp;&nbsp;")
         mdutil_file.write(f'[:pencil:](http://www.google.com "FEEDBACK")')
-
+        mdutil_file.new_line()
+        mdutil_file.new_line()
+        mdutil_file.new_line()
 
     def _get_changelog_signet(self):
         headers = requests.utils.default_headers()
