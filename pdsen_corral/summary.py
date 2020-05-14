@@ -30,8 +30,8 @@ def write_build_summary(output_file_name, token=None, dev=False):
 
     herd = gather_the_herd(dev, token)
 
-    table = ["tool", "version", "description", "download", "manual",
-             "changelog", "requirements", "license", "feedback"]
+    table = ["tool", "version", "description", "", "",
+             "", "", "", ""]
     n_columns = len(table)
     for k, v in herd.items():
         table.extend(v.get_table_row())
