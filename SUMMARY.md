@@ -2,7 +2,7 @@
 Software Summary
 ================
 
-|tool|version|description|download|manual|changelog|requirements|license|feedback|
+|tool|version|description|||||||
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pds-doi-service|None|Manage DOI worklow with the provider (OSTI, DataCite): reserve/draft/release...|[:floppy_disk:](http://www.google.com "DOWNLOAD")|[:mag:](http://www.google.com "USER'S MANUAL")|[:footprints:](https://www.gnupg.org/gph/en/manual/r1943.html "CHANGELOG")|[:unicorn:](http://www.google.com "REQUIREMENTS")|[:scroll:](http://www.google.com "LICENSE")|[:pencil:](http://www.google.com "FEEDBACK")|
 |pds-registry-app|0.1.0|Create records, store and request the digital product in the PDS registry|[:floppy_disk:](http://www.google.com "DOWNLOAD")|[:mag:](http://www.google.com "USER'S MANUAL")|[:footprints:](http://nasa-pds.github.io/pds-registry-app/CHANGELOG.html#010-2020-03-31 "CHANGELOG")|[:unicorn:](http://www.google.com "REQUIREMENTS")|[:scroll:](http://www.google.com "LICENSE")|[:pencil:](http://www.google.com "FEEDBACK")|
