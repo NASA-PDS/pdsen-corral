@@ -34,7 +34,11 @@ class cattleHead():
 
         return latest_tag.__str__() if latest_tag else None
 
+    def _get_download_cell(self):
+        return f'[!["Download"]( https://github.githubassets.com/images/icons/emoji/unicode/1f4be.png "Download")]({self._get_download_link()})'
+
     def _get_download_link(self):
+
         return f'https://github.com/NASA-PDS/{self._repo_name}/releases/tag/{self._version}'
 
     def _get_manual_link(self):
@@ -56,7 +60,7 @@ class cattleHead():
         return [self._name,
                 self._version if self._version else "None",
                 self._description,
-                f'[:floppy_disk:]({self._get_download_link()} "DOWNLOAD")',
+                self._get_download_cell(),
                 f'[:mag:]({self._get_manual_link()} "USER\'S MANUAL")',
                 f'[:footprints:]({self._get_changelog_link()} "CHANGELOG")',
                 f'[:unicorn:]({self._get_requirements_link()} "REQUIREMENTS")',
