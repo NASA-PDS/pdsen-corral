@@ -7,8 +7,17 @@ from pdsen_corral.versions import is_dev_version, get_max_tag
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
 class cattleHead():
+
+    _icon_dict = {
+        'download': 'https://github.githubassets.com/images/icons/emoji/unicode/1f4be.png',
+        'manual': 'https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png',
+        'changelog': 'https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png',
+        'requirements': 'https://github.githubassets.com/images/icons/emoji/unicode/1f984.png',
+        'license' : 'https://github.githubassets.com/images/icons/emoji/unicode/1f4dc.png',
+        'feedback': 'https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png'
+    }
+
     def __init__(self, name, github_path, description, dev=False, token=None):
         logger.info(f'create cattleHead {name}, {github_path}, {description}')
         self._name = name
@@ -34,11 +43,11 @@ class cattleHead():
 
         return latest_tag.__str__() if latest_tag else None
 
-    def _get_download_cell(self):
-        return f'[!["Download"]( https://github.githubassets.com/images/icons/emoji/unicode/1f4be.png "Download")]({self._get_download_link()})'
+    def _get_cell(self, function):
+        link_func = eval(f'self._get_{function}_link()')
+        return f'[![{function}]({self._icon_dict[function]} =20x20)]({link_func})'
 
     def _get_download_link(self):
-
         return f'https://github.com/NASA-PDS/{self._repo_name}/releases/tag/{self._version}'
 
     def _get_manual_link(self):
@@ -53,19 +62,17 @@ class cattleHead():
     def _get_license_link(self):
         return f'https://raw.githubusercontent.com/NASA-PDS/{self._repo_name}/master/LICENSE.txt'
 
-    def _get_issue_link(self):
+    def _get_feedback_link(self):
         return f'https://github.com/NASA-PDS/{self._repo_name}/issues/new/choose'
 
     def get_table_row(self):
+        icon_cells = [self._get_cell(k) for k in self._icon_dict.keys()]
         return [self._name,
                 self._version if self._version else "None",
                 self._description,
-                self._get_download_cell(),
-                f'[:mag:]({self._get_manual_link()} "USER\'S MANUAL")',
-                f'[:footprints:]({self._get_changelog_link()} "CHANGELOG")',
-                f'[:unicorn:]({self._get_requirements_link()} "REQUIREMENTS")',
-                f'[:scroll:]({self._get_license_link()} "LICENSE")',
-                f'[:pencil:]({self._get_issue_link()} "FEEDBACK")']
+                *icon_cells
+        ]
+
 
     def write(self, mdutil_file):
         mdutil_file.new_header(level=1, title=f'{self._name} ({self._version})')
