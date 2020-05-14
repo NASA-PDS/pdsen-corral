@@ -10,12 +10,12 @@ logger = logging.getLogger(__name__)
 class cattleHead():
 
     _icon_dict = {
-        'download': 'https://github.githubassets.com/images/icons/emoji/unicode/1f4be.png',
-        'manual': 'https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png',
-        'changelog': 'https://github.githubassets.com/images/icons/emoji/unicode/1f50d.png',
-        'requirements': 'https://github.githubassets.com/images/icons/emoji/unicode/1f984.png',
-        'license' : 'https://github.githubassets.com/images/icons/emoji/unicode/1f4dc.png',
-        'feedback': 'https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png'
+        'download': 'https://nasa-pds.github.io/pdsen-corral/images/download.png',
+        'manual': 'https://nasa-pds.github.io/pdsen-corral/images/manual.png',
+        'changelog': 'https://nasa-pds.github.io/pdsen-corral/images/changelog.png',
+        'requirements': 'https://nasa-pds.github.io/pdsen-corral/images/requirements.png',
+        'license' : 'https://nasa-pds.github.io/pdsen-corral/images/license.png',
+        'feedback': 'https://nasa-pds.github.io/pdsen-corral/images/feedback.png'
     }
 
     def __init__(self, name, github_path, description, dev=False, token=None):
@@ -45,7 +45,7 @@ class cattleHead():
 
     def _get_cell(self, function):
         link_func = eval(f'self._get_{function}_link()')
-        return f'[![icon]({self._icon_dict[function]})]({link_func} "{function}")'
+        return f'[![{function}]({self._icon_dict[function]})]({link_func} "{function}")'
 
     def _get_download_link(self):
         return f'https://github.com/NASA-PDS/{self._repo_name}/releases/tag/{self._version}'
