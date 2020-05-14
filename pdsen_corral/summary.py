@@ -29,7 +29,15 @@ def write_build_summary(output_file_name, token=None, dev=False):
     software_summary_md = MdUtils(file_name=output_file_name, title="Software Summary")
 
     herd = gather_the_herd(dev, token)
+
+    table = ["tool", "version", "description", "download", "manual",
+             "changelog", "requirements", "license", "feedback"]
+    n_columns = len(table)
     for k, v in herd.items():
-        v.write(software_summary_md)
+        table.extend(v.get_table_row())
+    software_summary_md.new_table(columns=n_columns,
+                                  rows=len(herd)+1,
+                                  text=table,
+                                  text_align='center')
 
     software_summary_md.create_md_file()

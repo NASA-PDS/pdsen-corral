@@ -34,8 +34,20 @@ class cattleHead():
 
         return latest_tag.__str__() if latest_tag else None
 
+    def get_table_row(self):
+        return [self._name,
+                self._version if self._version else "None",
+                self._description,
+                f'[:floppy_disk:](http://www.google.com "DOWNLOAD")',
+                f'[:mag:](http://www.google.com "USER\'S MANUAL")',
+                f'[:footprints:]({self._changelog_signets[self._version]} "CHANGELOG")' if self._version else '[:footprints:](https://www.gnupg.org/gph/en/manual/r1943.html "CHANGELOG")',
+                f'[:unicorn:](http://www.google.com "REQUIREMENTS")',
+                f'[:scroll:](http://www.google.com "LICENSE")',
+                f'[:pencil:](http://www.google.com "FEEDBACK")']
+
     def write(self, mdutil_file):
         mdutil_file.new_header(level=1, title=f'{self._name} ({self._version})')
+
         mdutil_file.new_paragraph(self._description)
         mdutil_file.new_line('&nbsp;')
         mdutil_file.new_line('&nbsp;')
