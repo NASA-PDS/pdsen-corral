@@ -34,16 +34,34 @@ class cattleHead():
 
         return latest_tag.__str__() if latest_tag else None
 
+    def _get_download_link(self):
+        return f'https://github.com/NASA-PDS/{self._repo_name}/releases/tag/{self._version}'
+
+    def _get_manual_link(self):
+        return f'https://nasa-pds.github.io/{self._repo_name}'
+
+    def _get_changelog_link(self):
+        return self._changelog_signets[self._version] if self._version else "https://www.gnupg.org/gph/en/manual/r1943.html"
+
+    def _get_requirements_link(self):
+        return 'https://en.wikipedia.org/wiki/Void_(astronomy)'
+
+    def _get_license_link(self):
+        return f'https://raw.githubusercontent.com/NASA-PDS/{self._repo_name}/master/LICENSE.txt'
+
+    def _get_issue_link(self):
+        return f'https://github.com/NASA-PDS/{self._repo_name}/issues/new/choose'
+
     def get_table_row(self):
         return [self._name,
                 self._version if self._version else "None",
                 self._description,
-                f'[:floppy_disk:](http://www.google.com "DOWNLOAD")',
-                f'[:mag:](http://www.google.com "USER\'S MANUAL")',
-                f'[:footprints:]({self._changelog_signets[self._version]} "CHANGELOG")' if self._version else '[:footprints:](https://www.gnupg.org/gph/en/manual/r1943.html "CHANGELOG")',
-                f'[:unicorn:](http://www.google.com "REQUIREMENTS")',
-                f'[:scroll:](http://www.google.com "LICENSE")',
-                f'[:pencil:](http://www.google.com "FEEDBACK")']
+                f'[:floppy_disk:]({self._get_download_link()} "DOWNLOAD")',
+                f'[:mag:]({self._get_manual_link()} "USER\'S MANUAL")',
+                f'[:footprints:]({self._get_changelog_link()} "CHANGELOG")',
+                f'[:unicorn:]({self._get_requirements_link()} "REQUIREMENTS")',
+                f'[:scroll:]({self._get_license_link()} "LICENSE")',
+                f'[:pencil:]({self._get_issue_link()} "FEEDBACK")']
 
     def write(self, mdutil_file):
         mdutil_file.new_header(level=1, title=f'{self._name} ({self._version})')
