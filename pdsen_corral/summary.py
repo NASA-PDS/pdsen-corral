@@ -12,8 +12,8 @@ def write_build_summary(output_file_name=None, token=None, dev=False):
     herd = Herd(dev=dev, token=token)
 
     if not output_file_name:
-        os.makedirs(herd.get_shepard_version(), exist_ok=True)
-        output_file_name = f'{herd.get_shepard_version()}/index'
+        output_file_name = os.path.join('output', herd.get_shepard_version(), 'index')
+        os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
 
     software_summary_md = MdUtils(file_name=output_file_name, title="Software Summary")
 
