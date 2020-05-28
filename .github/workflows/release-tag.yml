@@ -1,0 +1,38 @@
+name: dev build release
+
+on:
+  tag:
+      branches:
+        - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        lfs: true
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: deploy util script
+      run: |
+        pip install .
+    - uses: actions/checkout@v2
+      with:
+        ref: master
+    - name: generate summary
+      run: echo ::set-env name=INDEX_FILE::$(summary --token ${{ secrets.GITHUB_TOKEN }})
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@master
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: output
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
