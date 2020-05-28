@@ -1,5 +1,5 @@
 [submodule "."]
-    version = 11.0-SNAPSHOT
+    version = 10.0
 
 [submodule "pds-doi-service"]
     path = pds-doi-service
