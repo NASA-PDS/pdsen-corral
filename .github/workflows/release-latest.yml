@@ -26,18 +26,13 @@ jobs:
         pip install .
     - uses: actions/checkout@v2
       with:
-        ref: gh-pages
+        ref: master
     - name: generate summary
       run: echo ::set-env name=INDEX_FILE::$(summary --token ${{ secrets.GITHUB_TOKEN }} --dev)
-
-    - name: Commit INDEX.md file
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add ${{ env.INDEX_FILE }}
-        git commit -m "update summary" --allow-empty
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@master
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: ${{ env.INDEX_FILE }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
