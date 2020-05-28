@@ -7,7 +7,7 @@ from pdsen_corral.versions import is_dev_version, get_max_tag
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class cattleHead():
+class CattleHead():
 
     _icon_dict = {
         'download': 'https://nasa-pds.github.io/pdsen-corral/images/download.png',
@@ -18,7 +18,7 @@ class cattleHead():
         'feedback': 'https://nasa-pds.github.io/pdsen-corral/images/feedback.png'
     }
 
-    def __init__(self, name, github_path, description, dev=False, token=None):
+    def __init__(self, name, github_path, description, version=None, dev=False, token=None):
         logger.info(f'create cattleHead {name}, {github_path}, {description}')
         self._name = name
         self._github_path = github_path
@@ -29,9 +29,9 @@ class cattleHead():
         self._changelog_signets = self._get_changelog_signet()
         self._dev = dev
         self._token = token
-        self._version = self._get_version()
+        self._version = self._get_latest_patch(minor=version)
 
-    def _get_version(self):
+    def _get_latest_patch(self, minor=None):
         gh = github3.login(token=self._token)
         repo = gh.repository(self._org, self._repo_name)
         latest_tag = None
@@ -39,13 +39,15 @@ class cattleHead():
             if is_dev_version(tag.name) and self._dev:  # if we have a dev version and we look for dev version
                 latest_tag = get_max_tag(tag.name, latest_tag) if latest_tag else tag.name
             elif not (is_dev_version(tag.name) or self._dev):  # if we don't have a dev version and we look for stable version
-                latest_tag = get_max_tag(tag.name, latest_tag) if latest_tag else tag.name
+                if minor is None \
+                        or (minor and (tag.name.startswith(minor) or tag.name.startswith(f'v{minor}'))):
+                    latest_tag = get_max_tag(tag.name, latest_tag) if latest_tag else tag.name
 
         return latest_tag.__str__() if latest_tag else None
 
     def _get_cell(self, function):
         link_func = eval(f'self._get_{function}_link()')
-        return f'[![{function}]({self._icon_dict[function]})]({link_func} "{function}")'
+        return f'[![{function}]({self._icon_dict[function]})]({requests.utils.quote(link_func)} "{function}")'
 
     def _get_download_link(self):
         return f'https://github.com/NASA-PDS/{self._repo_name}/releases/tag/{self._version}'
@@ -72,33 +74,6 @@ class cattleHead():
                 self._description,
                 *icon_cells
         ]
-
-
-    def write(self, mdutil_file):
-        mdutil_file.new_header(level=1, title=f'{self._name} ({self._version})')
-
-        mdutil_file.new_paragraph(self._description)
-        mdutil_file.new_line('&nbsp;')
-        mdutil_file.new_line('&nbsp;')
-        mdutil_file.write("&nbsp;&nbsp;&nbsp;")
-        mdutil_file.write(f'[:floppy_disk:](http://www.google.com "DOWNLOAD")')
-        mdutil_file.write("&nbsp;&nbsp;&nbsp;")
-        mdutil_file.write(f'[:mag:](http://www.google.com "USER\'S MANUAL")')
-
-        mdutil_file.write("&nbsp;&nbsp;&nbsp;")
-        if self._version:
-            mdutil_file.write(f'[:footprints:]({self._changelog_signets[self._version]} "CHANGELOG")')
-        else:
-            mdutil_file.write(f'[:footprints:](https://www.gnupg.org/gph/en/manual/r1943.html "CHANGELOG")')
-
-        mdutil_file.write(f'[:unicorn:](http://www.google.com "REQUIREMENTS")')
-        mdutil_file.write("&nbsp;&nbsp;&nbsp;")
-        mdutil_file.write(f'[:scroll:](http://www.google.com "LICENSE")')
-        mdutil_file.write("&nbsp;&nbsp;&nbsp;")
-        mdutil_file.write(f'[:pencil:](http://www.google.com "FEEDBACK")')
-        mdutil_file.new_line('&nbsp;')
-        mdutil_file.new_line('&nbsp;')
-        mdutil_file.new_line('&nbsp;')
 
     def _get_changelog_signet(self):
         headers = requests.utils.default_headers()

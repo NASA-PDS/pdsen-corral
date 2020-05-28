@@ -1,19 +1,25 @@
+[submodule "."]
+    version = 10.0
+
 [submodule "pds-doi-service"]
-	path = pds-doi-service
-	url = https://github.com/NASA-PDS/pds-doi-service/
-	description = Manage DOI worklow with the provider (OSTI, DataCite): reserve/draft/release...
+    path = pds-doi-service
+    url = https://github.com/NASA-PDS/pds-doi-service/
+    description = Manage DOIs
 
 [submodule "pds-registry-app"]
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
     description = Create records, store and request the digital product in the PDS registry
+    version = 0.1
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
     url = https://github.com/NASA-PDS/pds-deep-archive
     description = Archive PDS products with OAIS standards to NSSDCA
+    version = 0.1
 
 [submodule "validate"]
     path = validate
     url = https://github.com/NASA-PDS/validate/
     description = Validate PDS formats
+    version = 1.23

@@ -28,13 +28,13 @@ jobs:
       with:
         ref: gh-pages
     - name: generate summary
-      run: |
-        summary --token ${{ secrets.GITHUB_TOKEN }} --output SUMMARY --dev
-    - name: Commit SUMMARY.md file
+      run: echo ::set-env name=INDEX_FILE::$(summary --token ${{ secrets.GITHUB_TOKEN }} --dev)
+
+    - name: Commit INDEX.md file
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add SUMMARY.md
+        git add ${{ env.INDEX_FILE }}
         git commit -m "update summary" --allow-empty
     - name: Push changes
       uses: ad-m/github-push-action@master
