@@ -30,11 +30,11 @@ jobs:
     - name: generate summary
       run: echo ::set-env name=INDEX_PATH::$(summary --token ${{ secrets.GITHUB_TOKEN }} --dev)
     - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add ${{ env.INDEX_PATH }}
-          git commit -m "update build version" -a
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ${{ env.INDEX_PATH }}
+        git commit -m "update build version" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
