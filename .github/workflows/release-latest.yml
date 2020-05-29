@@ -28,7 +28,17 @@ jobs:
       with:
         ref: master
     - name: generate summary
-      run: echo ::set-env name=INDEX_FILE::$(summary --token ${{ secrets.GITHUB_TOKEN }} --dev)
+      run: echo ::set-env name=INDEX_PATH::$(summary --token ${{ secrets.GITHUB_TOKEN }} --dev)
+    - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ${{ env.INDEX_PATH }}
+          git commit -m "update build version" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy
       uses: s0/git-publish-subdir-action@master
       env:
