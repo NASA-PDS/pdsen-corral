@@ -11,6 +11,10 @@ def write_build_summary(output_file_name=None, token=None, dev=False):
 
     herd = Herd(dev=dev, token=token)
 
+    if dev and not (herd.get_shepard_version().contains('dev') or herd.get_shepard_version().contains('SNAPSHOT')):
+        logger.error("version of build does not contain dev or SNAPSHOT, dev build summary is not generated")
+        exit(1)
+
     if not output_file_name:
         output_file_name = os.path.join('output', herd.get_shepard_version(), 'index')
         os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
