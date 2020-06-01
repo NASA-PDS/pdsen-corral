@@ -11,7 +11,7 @@ def write_build_summary(output_file_name=None, token=None, dev=False):
 
     herd = Herd(dev=dev, token=token)
 
-    if dev and not (herd.get_shepard_version().contains('dev') or herd.get_shepard_version().contains('SNAPSHOT')):
+    if dev and not ('dev' in herd.get_shepard_version() or 'SNAPSHOT' in herd.get_shepard_version()):
         logger.error("version of build does not contain dev or SNAPSHOT, dev build summary is not generated")
         exit(1)
 

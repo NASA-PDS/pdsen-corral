@@ -43,4 +43,3 @@ def grab_latest_versions(token, dev=False):
 
     return latest_versions
 
-
