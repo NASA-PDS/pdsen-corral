@@ -42,5 +42,13 @@ class Herd:
 
         return 0
 
+    def set_shepard_version(self, version):
+        """
+        For unit test purpose
+        :param version:
+        :return:
+        """
+        self._config['submodule "."']['version'] = version
+
     def get_shepard_version(self):
         return self._config.get('submodule "."', 'version').strip(" ")

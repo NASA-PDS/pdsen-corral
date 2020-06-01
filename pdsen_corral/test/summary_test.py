@@ -17,10 +17,10 @@ class MyTestCase(unittest.TestCase):
         version = herd.get_shepard_version()
 
     def test_summary_dev(self):
-        write_build_summary(output_file_name='output/dev_summary.md', token=TOKEN, dev=True)
+        write_build_summary(output_file_name='output/dev_summary.md', token=TOKEN, dev=True, version='10.0-SNAPSHOT')
 
     def test_summary_release(self):
-        write_build_summary(output_file_name='output/rel_summary.md', token=TOKEN, dev=False)
+        write_build_summary(output_file_name='output/rel_summary.md', token=TOKEN, dev=False, version='10.0')
 
 
 if __name__ == '__main__':
