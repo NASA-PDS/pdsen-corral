@@ -62,7 +62,8 @@ class CattleHead():
 
     def _get_requirements_link(self):
         url = f'https://nasa-pds.github.io/{self._repo_name}/REQUIREMENTS'
-        if requests.get(url).status_code == 200:
+        logger.info(f'try url {url} for requirements')
+        if requests.get(url).status_code != 404:
             return url
         else:
             return VOID_URL
