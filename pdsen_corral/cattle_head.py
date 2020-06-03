@@ -7,6 +7,8 @@ from pdsen_corral.versions import is_dev_version, get_max_tag
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+VOID_URL = 'https://en.wikipedia.org/wiki/Void_(astronomy)'
+
 class CattleHead():
 
     _icon_dict = {
@@ -59,7 +61,11 @@ class CattleHead():
         return self._changelog_signets[self._version] if self._version else "https://www.gnupg.org/gph/en/manual/r1943.html"
 
     def _get_requirements_link(self):
-        return 'https://en.wikipedia.org/wiki/Void_(astronomy)'
+        url = f'https://nasa-pds.github.io/{self._repo_name}/REQUIREMENTS'
+        if requests.get(url).status_code == 200:
+            return url
+        else:
+            return VOID_URL
 
     def _get_license_link(self):
         return f'https://raw.githubusercontent.com/NASA-PDS/{self._repo_name}/master/LICENSE.txt'

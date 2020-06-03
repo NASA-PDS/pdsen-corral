@@ -14,6 +14,8 @@ Update configuration in master branch, file: `.gitmodule`
 
 ## Development release
 
+    git pull
+
 .gitmodule file must have a version containing 'dev' or 'SNAPSHOT', for example:
 
     [submodule "."]
@@ -21,6 +23,7 @@ Update configuration in master branch, file: `.gitmodule`
 
 Then commit and push the modification:
   
+    
     git commit -a -m "new development build"
     git push        
         
@@ -33,6 +36,8 @@ For example [http://nasa-pds.github.io/pdsen-corral/10.0-SNAPSHOT](http://nasa-p
 
 ## Tag release
 
+    git pull
+
 .gitmodule file must have a stable (not containing 'dev' or 'SNAPSHOT'), for example:
 
     [submodule "."]
@@ -40,6 +45,7 @@ For example [http://nasa-pds.github.io/pdsen-corral/10.0-SNAPSHOT](http://nasa-p
 
 Then commit, create tag and push the modification:
   
+
     git commit -a -m "new stable build"
     git tag '10.0'
     git push --tags    
