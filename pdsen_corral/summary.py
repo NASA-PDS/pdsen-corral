@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def write_build_summary(output_file_name=None, token=None, dev=False, version=None):
+def write_build_summary(root_dir='output', output_file_name=None, token=None, dev=False, version=None):
 
     herd = Herd(dev=dev, token=token)
 
@@ -25,7 +25,7 @@ def write_build_summary(output_file_name=None, token=None, dev=False, version=No
         exit(1)
 
     if not output_file_name:
-        output_file_name = os.path.join('output', version, 'index')
+        output_file_name = os.path.join(root_dir, version, 'index')
         os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
 
     software_summary_md = MdUtils(file_name=output_file_name, title=f'Software Summary (build {version})')

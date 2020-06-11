@@ -13,6 +13,7 @@ def update_root_index(root_dir):
     for d in os.listdir(root_dir):
         if os.path.isdir(os.path.join(root_dir,d)) and prog.match(d):
             build_dirs.append(f'[{d}](./{d})')
-    index_md_file.new_list(build_dirs.reverse())
+    build_dirs.reverse()
+    index_md_file.new_list(build_dirs)
 
     index_md_file.create_md_file()
