@@ -33,7 +33,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add ${{ env.INDEX_PATH }}
+        git add ${{ env.INDEX_PATH }} output/index.md
         git commit -m "update build version" -a
     - name: Push changes
       uses: ad-m/github-push-action@master

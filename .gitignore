@@ -1,0 +1,5 @@
+env.sh
+pdsen_corral.egg-info/
+pdsen_corral/__pycache__/
+pdsen_corral/test/__pycache__/
+venv/

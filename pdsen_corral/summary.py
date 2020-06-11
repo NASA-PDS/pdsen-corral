@@ -28,7 +28,7 @@ def write_build_summary(output_file_name=None, token=None, dev=False, version=No
         output_file_name = os.path.join('output', version, 'index')
         os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
 
-    software_summary_md = MdUtils(file_name=output_file_name, title="Software Summary")
+    software_summary_md = MdUtils(file_name=output_file_name, title=f'Software Summary (build {version})')
 
     table = ["tool", "version", "description", "", "",
              "", "", "", ""]
