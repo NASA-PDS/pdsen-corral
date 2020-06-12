@@ -30,7 +30,7 @@ def write_build_summary(root_dir='output', output_file_name=None, token=None, de
 
     software_summary_md = MdUtils(file_name=output_file_name, title=f'Software Summary (build {version})')
 
-    manual_img = '![manual](https://nasa-pds.github.io/pdsen-corral/images/manul_text.png)'
+    manual_img = '![manual](https://nasa-pds.github.io/pdsen-corral/images/manual_text.png)'
 
     table = ["tool", "version", "description", "", manual_img,
              "", "", "", ""]
