@@ -6,6 +6,7 @@ from pdsen_corral.herd import Herd
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+COLUMNS = ['download', 'manual', 'changelog', 'requirements', 'license', 'feedback']
 
 def write_build_summary(root_dir='output', output_file_name=None, token=None, dev=False, version=None):
 
@@ -30,10 +31,11 @@ def write_build_summary(root_dir='output', output_file_name=None, token=None, de
 
     software_summary_md = MdUtils(file_name=output_file_name, title=f'Software Summary (build {version})')
 
-    manual_img = '![manual](https://nasa-pds.github.io/pdsen-corral/images/manual_text.png)'
+    column_headers = []
+    for column in COLUMNS:
+        column_headers.append(f'![{column}](https://nasa-pds.github.io/pdsen-corral/images/{column}_text.png)')
 
-    table = ["tool", "version", "description", "", manual_img,
-             "", "", "", ""]
+    table = ["tool", "version", "description", "", *column_headers]
     n_columns = len(table)
     for k, ch in herd.get_cattle_heads().items():
         table.extend(ch.get_table_row())
