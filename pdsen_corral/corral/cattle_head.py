@@ -2,7 +2,7 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 import github3
-from pdsen_corral.versions import is_dev_version, get_max_tag
+from pdsen_corral.versions.versions import is_dev_version, get_max_tag
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

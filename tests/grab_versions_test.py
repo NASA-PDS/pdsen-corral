@@ -1,6 +1,6 @@
 import os
 import unittest
-from pdsen_corral.cattle_head import CattleHead
+from pdsen_corral.corral.cattle_head import CattleHead
 
 TOKEN = os.environ.get('GITHUB_TOKEN')
 

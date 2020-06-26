@@ -1,7 +1,7 @@
 import os
 from configparser import ConfigParser
 import logging
-from pdsen_corral.cattle_head import CattleHead
+from pdsen_corral.corral.cattle_head import CattleHead
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

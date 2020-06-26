@@ -1,8 +1,8 @@
 import unittest
 import os
 import logging
-from pdsen_corral.herd import Herd
-from pdsen_corral.summary import write_build_summary
+from pdsen_corral.corral.herd import Herd
+from pdsen_corral.output.summary import write_build_summary
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

@@ -1,7 +1,7 @@
 import os
 import logging
 from mdutils import MdUtils
-from pdsen_corral.herd import Herd
+from pdsen_corral.corral.herd import Herd
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

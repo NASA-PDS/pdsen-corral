@@ -1,7 +1,7 @@
 import argparse
 
-from pdsen_corral.summary import write_build_summary
-from pdsen_corral.root_index import update_root_index
+from pdsen_corral.output.summary import write_build_summary
+from pdsen_corral.output.root_index import update_root_index
 
 
 def main():
@@ -18,7 +18,6 @@ def main():
     args = parser.parse_args()
 
     output_dir = write_build_summary(root_dir=args.output, token=args.token, dev=args.dev)
-    update_root_index(args.output)
     print(output_dir)
 
 

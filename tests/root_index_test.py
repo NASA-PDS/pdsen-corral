@@ -1,5 +1,5 @@
 import unittest
-from pdsen_corral.root_index import update_root_index
+from pdsen_corral.output.root_index import update_root_index
 
 
 class MyTestCase(unittest.TestCase):
