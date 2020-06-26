@@ -18,6 +18,7 @@ def write_build_summary(root_dir='output', output_file_name=None, token=None, de
         # for unit test
         herd.set_shepard_version(version)
 
+    logger.info(f'build version is {version}')
     if dev and not ('dev' in version or 'SNAPSHOT' in version):
         logger.error("version of build does not contain dev or SNAPSHOT, dev build summary is not generated")
         exit(1)
