@@ -30,7 +30,7 @@
     description = PDS4 information model and tools for its maintenance
     version = 11.3
 
-[harvest]
+[submodule "harvest"]
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
     description = harvest pds4 label to store them in registry
