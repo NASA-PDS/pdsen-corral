@@ -35,7 +35,7 @@ setuptools.setup(
         'requests'
     ],
     entry_points={
-        'console_scripts': ['summary=pdsen_corral.cmd:main'],
+        'console_scripts': ['summary=pdsen_corral.build_summary:main'],
     },
 
 
