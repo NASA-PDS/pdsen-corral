@@ -23,3 +23,9 @@
     url = https://github.com/NASA-PDS/validate/
     description = Validate PDS formats
     version = 1.23
+
+[submodule "pds4-information-model"]
+    path = pds4-information-model
+    url = https://github.com/NASA-PDS/pds4-information-model/
+    description = PDS4 information model and tools for its maintenance
+    version = 11.3

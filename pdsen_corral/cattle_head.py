@@ -58,10 +58,16 @@ class CattleHead():
         return f'https://nasa-pds.github.io/{self._repo_name}'
 
     def _get_changelog_link(self):
-        return self._changelog_signets[self._version] if self._version else "https://www.gnupg.org/gph/en/manual/r1943.html"
+        if self._version:
+            if self._version in self._changelog_signets:
+                return self._changelog_signets[self._version]
+            else:
+                return
+        else:
+            return "https://www.gnupg.org/gph/en/manual/r1943.html"
 
     def _get_requirements_link(self):
-        url = f'https://nasa-pds.github.io/{self._repo_name}/pdsen-corral/{self._version}/REQUIREMENTS'
+        url = f'https://nasa-pds.github.io/{self._repo_name}/pdsen-corral/{self._version}/REQUIREMENTS.html'
         logger.info(f'try url {url} for requirements')
         if self._version and requests.get(url).status_code != 404:
             return url
