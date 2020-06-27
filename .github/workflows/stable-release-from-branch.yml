@@ -34,5 +34,5 @@ jobs:
         REPO: self
         BRANCH: gh-pages
         FOLDER: ${{ env.INDEX_FILE }}
-        TARGET_FOLDER: ${{ env.INDEX_FILE }}
+        TARGET_FOLDER: output
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
