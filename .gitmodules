@@ -1,5 +1,5 @@
 [submodule "."]
-    version = 10.0-SNAPSHOT
+    version = 11.0-SNAPSHOT
 
 [submodule "pds-doi-service"]
     path = pds-doi-service
@@ -29,3 +29,11 @@
     url = https://github.com/NASA-PDS/pds4-information-model/
     description = PDS4 information model and tools for its maintenance
     version = 11.3
+
+[submodule "harvest"]
+    path = harvest
+    url = https://github.com/NASA-PDS/harvest/
+    description = harvest pds4 label to store them in registry
+    version = 3.2
+
+
