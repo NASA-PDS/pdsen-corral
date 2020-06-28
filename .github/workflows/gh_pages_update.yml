@@ -1,0 +1,37 @@
+name: gh-pages updates
+
+on:
+  push:
+      branches:
+        - gh-pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: gh-pages
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: deploy util script
+      run: |
+        pip install pds_github_util
+        summaries --token ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -a -m "automated gh-pages update"
+    - name: Push changes
+      uses: ad-m/github-push-action@gh-pages
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
