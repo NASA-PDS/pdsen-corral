@@ -2,9 +2,9 @@ name: gh-pages updates
 
 on:
   push:
-      branches:
-        - master
-        - [0-9]+\.[0-9]+
+    branches:
+      - master
+      - [0-9]+\.[0-9]+
 
 jobs:
   build:
