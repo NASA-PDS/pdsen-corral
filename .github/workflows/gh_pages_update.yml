@@ -32,6 +32,6 @@ jobs:
         git add .
         git commit -a -m "automated gh-pages update"
     - name: Push changes
-      uses: ad-m/github-push-action@gh-pages
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
