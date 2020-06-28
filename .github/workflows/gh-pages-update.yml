@@ -1,9 +1,9 @@
-name: dev build release
+name: gh-pages updates
 
 on:
   push:
       branches:
-        - master
+        - gh-pages
 
 jobs:
   build:
@@ -23,26 +23,15 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: deploy util script
       run: |
-        pip install .
-    - uses: actions/checkout@v2
-      with:
-        ref: master
-    - name: generate summary
-      run: echo ::set-env name=INDEX_PATH::$(summary --token ${{ secrets.GITHUB_TOKEN }} --dev)
+        pip install pds_github_util
+        summaries --token ${{ secrets.GITHUB_TOKEN }}
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add ${{ env.INDEX_PATH }} output/index.md
-        git commit -m "update build version" -a
+        git add .
+        git commit -a -m "automated gh-pages update"
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@gh-pages
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Deploy
-      uses: s0/git-publish-subdir-action@master
-      env:
-        REPO: self
-        BRANCH: gh-pages
-        FOLDER: output
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
