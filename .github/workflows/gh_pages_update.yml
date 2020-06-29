@@ -30,7 +30,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
-        echo "git commit -a -m 'automated gh-pages update'"
+        echo $(git commit -a -m 'automated gh-pages update')
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
