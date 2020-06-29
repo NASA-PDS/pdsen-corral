@@ -36,4 +36,18 @@
     description = harvest pds4 label to store them in registry
     version = 3.2
 
+[submodule "registry"]
+    path = registry
+    url = https://github.com/NASA-PDS/registry/
+    description = service of registry for pds artifacts
+    version = 3.2
+
+[submodule "transform"]
+    path = transform
+    url = https://github.com/NASA-PDS/transform/
+    description = transform PDS3 and PDS4 into various format
+    version = 1.11
+
+
+
 
