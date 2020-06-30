@@ -13,7 +13,7 @@ umbrella project to manage the build cycle (continuous integration and stable re
 Update configuration in master branch, file: `.gitmodule`
 
 ## Development release
-
+:wq
     git pull
 
 .gitmodule file must have a version containing 'dev' or 'SNAPSHOT', for example:
