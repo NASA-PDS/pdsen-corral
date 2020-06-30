@@ -54,6 +54,10 @@
     description = java api library to read pds4 products
     version = 1.9
 
-
+[submodule "mi-label"]
+    path = mi-label
+    url = https://github.com/NASA-PDS/mi-label/
+    description = metadata injector for PDS labels
+    version = 1.1
 
 
