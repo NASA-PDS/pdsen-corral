@@ -60,4 +60,11 @@
     description = metadata injector for PDS labels
     version = 1.1
 
+[submodule "example-harvest"]
+    path = example-harvest
+    url = https://github.com/tloubrieu-jpl/harvest
+    description = example for tag release
+    version = 3.2
+
+
 
