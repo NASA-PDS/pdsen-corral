@@ -1,11 +1,9 @@
 # pdsen-corral
-umbrella project to manage the build cycle (continuous integration and stable release) for the PDS EN tools.
 
-## Develop and Test
+Umbrella project to manage the build cycle (continuous integration and stable release) for the PDS EN tools.
 
-    pip install -e 
-    export GITHUB_TOKEN=<token value>
-    python setup.py test
+The master branch describes the current development version.
+
 
 
 ## Use
