@@ -62,7 +62,7 @@
 
 [submodule "example_harvest"]
     path = example_harvest
-    url = https://github.com/tloubrieu/harvest/
+    url = https://github.com/tloubrieu-jpl/harvest/
     description = repository to demonstrate/test workflow
     version = 3.2
 
