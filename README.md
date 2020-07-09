@@ -1,14 +1,18 @@
 # pdsen-corral
 
-Umbrella project to manage the build cycle for the PDS EN tools (continuous integration for development and stable releases).
+This umbrella project manages the build cycle for the PDS EN tools. As such it aggregates status of the PDS EN components stable and development releases. It relies standardized continuous integration implemented by these components.
 
-The repository provides web pages to describe as automatically as possible the builds.
+The provided service are web pages describing as automatically as possible the builds:
 
 http://nasa-pds.github.io/pdsen-corral/
 
-The details on how these pages can be generated is given after:
+The content is intended for:
+  - PDS software users, to know what the latest and history of available software
+  - PDS EN test team, to know the scope of the up coming releases
 
-
+The details on how these pages are generated is given after. It requires:
+ - to have continuous integration implemented on **components** of the build.
+ - to reference the components in the **psden-corral** repository
 
 ## Component's repository (e.g. validate, pds-deep-archive)
 
@@ -25,6 +29,7 @@ The continuous integration process has implement these mandary steps:
 - **ping pdsen-corral** by doing an empty commit
 
 Most of these steps are implemented by the [pds-github-util](https://github.com/NASA-PDS/pds-github-util) library in [github actions](https://github.com/features/actions).
+
 #### Examples
 
 See examples of continuous integration implementation. Use them to initiate new repository:
@@ -41,7 +46,7 @@ For **stable** release:
 
 #### Development or snapshot
 
-The development or snapshot work is commited and pushed in the *master* branch of the repositories.
+The development or snapshot work is committed and pushed in the *master* branch of the repositories.
 
 The github actions will publish the release files and update the local reports (changelog, requirements).
 The github action will also trigger the generation of the gh-pages on pdsen-corral to reflect the latest updates.
@@ -65,7 +70,7 @@ The github action also triggers the generation of gh-pages on pdsen-corral to re
 
 Current development build (ie until beginning of UIT phase) is described on the **master** branch.
 
-`.gitmodule` file must have a version containing 'dev' or 'SNAPSHOT', for example:
+`.gitmodule` file must have a version containing 'SNAPSHOT', for example:
 
     [submodule "."]
         version = 10.0-SNAPSHOT
