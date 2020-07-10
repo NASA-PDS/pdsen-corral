@@ -15,6 +15,7 @@ Development releases:
 
 |build|planned release|update|
 | :---: | :---: | :---: |
+|[11.0](./11.0)|<span style="color:orange">2020-09-30</span>|2020-07-10|
 |[11.0-SNAPSHOT](./11.0-SNAPSHOT)|<span style="color:orange">2020-09-30</span>|2020-07-10|
   
 ![new PDS logo test](https://nasa-pds.github.io/pdsen-corral/images/logo.png)
