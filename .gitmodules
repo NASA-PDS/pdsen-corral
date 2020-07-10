@@ -1,6 +1,6 @@
 [submodule "."]
-    version = 11.0-SNAPSHOT
-    release = 2020-09-30
+    version = 11.1-SNAPSHOT
+    release = 2021-04-30
 
 [submodule "pds-doi-service"]
     path = pds-doi-service
