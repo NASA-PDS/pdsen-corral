@@ -30,6 +30,8 @@ The continuous integration process has implement these mandary steps:
 
 Most of these steps are implemented by the [pds-github-util](https://github.com/NASA-PDS/pds-github-util) library in [github actions](https://github.com/features/actions).
 
+The component needs a secret 'ADMIN_GITHUB_TOKEN' which value is a github personal access token allowed to push to pdsen-corral.
+
 #### Examples
 
 See examples of continuous integration implementation. Use them to initiate new repository:
