@@ -39,7 +39,7 @@ For the **development** releases:
 - java project: https://github.com/NASA-PDS/validate/blob/master/.github/workflows/snapshot-maven.yml
 
 For **stable** release:
-- java project: https://github.com/tloubrieu-jpl/harvest/blob/gh-pages/.github/workflows/maven-snapshot.yml
+- java project: https://github.com/tloubrieu-jpl/harvest/blob/master/.github/workflows/release.yml
 - python project: To Be Provided
 
 ### Everyday updates
