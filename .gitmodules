@@ -5,66 +5,56 @@
 [submodule "pds-doi-service"]
     path = pds-doi-service
     url = https://github.com/NASA-PDS/pds-doi-service/
-    description = Manage DOIs
+
 
 [submodule "pds-registry-app"]
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
-    description = Create records, store and request the digital product in the PDS registry
     version = 0.1
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
     url = https://github.com/NASA-PDS/pds-deep-archive
-    description = Archive PDS products with OAIS standards to NSSDCA
     version = 0.1
 
 [submodule "validate"]
     path = validate
     url = https://github.com/NASA-PDS/validate/
-    description = Validate PDS formats
     version = 1.23
 
 [submodule "pds4-information-model"]
     path = pds4-information-model
     url = https://github.com/NASA-PDS/pds4-information-model/
-    description = PDS4 information model and tools for its maintenance
     version = 11.3
 
 [submodule "harvest"]
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
-    description = harvest pds4 label to store them in registry
     version = 3.2
 
 [submodule "registry"]
     path = registry
     url = https://github.com/NASA-PDS/registry/
-    description = service of registry for pds artifacts
     version = 3.2
 
 [submodule "transform"]
     path = transform
     url = https://github.com/NASA-PDS/transform/
-    description = transform PDS3 and PDS4 into various format
     version = 1.11
 
 [submodule "pds4-jparser"]
     path = pds4-jparser
     url = https://github.com/NASA-PDS/pds4-jparser/
-    description = java api library to read pds4 products
     version = 1.9
 
 [submodule "mi-label"]
     path = mi-label
     url = https://github.com/NASA-PDS/mi-label/
-    description = metadata injector for PDS labels
     version = 1.1
 
 [submodule "example-harvest"]
     path = example-harvest
     url = https://github.com/tloubrieu-jpl/harvest
-    description = example for tag release
     version = 3.2
 
 
