@@ -14,6 +14,47 @@ The details on how these pages are generated is given after. It requires:
  - to have continuous integration implemented on **components** of the build.
  - to reference the components in the **psden-corral** repository
 
+
+## in pdsen-corral repository
+
+### Development build
+
+Current development build (ie until beginning of UIT phase) is described on the **master** branch.
+
+`.gitmodule` file must have a version containing 'SNAPSHOT', for example:
+
+    [submodule "."]
+        version = 10.0-SNAPSHOT
+
+The modules are describes in submodule sections as follow:
+
+    [submodule "pds-doi-service"]
+        url = https://github.com/NASA-PDS/pds-doi-service/
+
+
+The latest dev or snapshot version of the components are integrated to the current snapshot build.
+
+### Stable release
+
+Stable releases are described in branch named after the build number (e.g. 10.1, 11.0, ...). The stable release process starts at the beginning of the UIT phase.
+
+In .gitmodule, the current build version is described as follow:
+
+    [submodule "."]
+        version = 10.1
+        
+The components are described as follow:
+
+    [submodule "pds-doi-service"]
+        url = https://github.com/NASA-PDS/pds-doi-service/
+        version = 1.0
+        
+The module's version are described with 2 digits only.
+The last digit (patch version) is automatically updated to the latest whenever an update is done in the components.    
+
+ 
+
+
 ## Component's repository (e.g. validate, pds-deep-archive)
 
 To enable the integration of a component in the build, its repository need to follow some rules.
@@ -66,44 +107,4 @@ When a new tag is created the github action creates the local changelog and requ
 The github action also triggers the generation of gh-pages on pdsen-corral to reference the latest patched stable versions. 
 
 
-## in pdsen-corral repository
-
-### Development build
-
-Current development build (ie until beginning of UIT phase) is described on the **master** branch.
-
-`.gitmodule` file must have a version containing 'SNAPSHOT', for example:
-
-    [submodule "."]
-        version = 10.0-SNAPSHOT
-
-The modules are describes in submodule sections as follow:
-
-    [submodule "pds-doi-service"]
-        url = https://github.com/NASA-PDS/pds-doi-service/
-        description = Manage DOIs
-
-
-The latest dev or snapshot version of the components are integrated to the current snapshot build.
-
-### Stable release
-
-Stable releases are described in branch named after the build number (e.g. 10.1, 11.0, ...). The stable release process starts at the beginning of the UIT phase.
-
-In .gitmodule, the current build version is described as follow:
-
-    [submodule "."]
-        version = 10.1
-        
-The components are described as follow:
-
-    [submodule "pds-doi-service"]
-        url = https://github.com/NASA-PDS/pds-doi-service/
-        description = Manage DOIs       
-        version = 1.0
-        
-The module's version are described with 2 digits only.
-The last digit (patch version) is automatically updated to the latest whenever an update is done in the components.    
-
- 
 
