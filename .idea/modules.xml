@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../pdsen-corral/.idea/pdsen-corral.iml" filepath="$PROJECT_DIR$/../pdsen-corral/.idea/pdsen-corral.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pdsen-corral.iml" filepath="$PROJECT_DIR$/.idea/pdsen-corral.iml" />
     </modules>
   </component>
 </project>
