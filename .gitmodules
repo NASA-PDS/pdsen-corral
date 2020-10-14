@@ -18,19 +18,19 @@
     path = pds-deep-archive
     url = https://github.com/NASA-PDS/pds-deep-archive
     description = Archive PDS products with OAIS standards to NSSDCA
-    version = 0.1
+    version = 0.2
 
 [submodule "validate"]
     path = validate
     url = https://github.com/NASA-PDS/validate/
     description = Validate PDS formats
-    version = 1.23
+    version = 1.24
 
 [submodule "pds4-information-model"]
     path = pds4-information-model
     url = https://github.com/NASA-PDS/pds4-information-model/
     description = PDS4 information model and tools for its maintenance
-    version = 11.3
+    version = 12.0
 
 [submodule "harvest"]
     path = harvest
@@ -38,9 +38,9 @@
     description = harvest pds4 label to store them in registry
     version = 3.2
 
-[submodule "registry"]
+[submodule "pds-registry-mgr-elastic"]
     path = registry
-    url = https://github.com/NASA-PDS/registry/
+    url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
     version = 3.2
 
