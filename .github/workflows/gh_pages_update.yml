@@ -31,6 +31,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git pull
         git add .
         echo $(git commit -a -m 'automated gh-pages update')
     - name: Push changes
