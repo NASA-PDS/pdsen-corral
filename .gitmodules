@@ -12,7 +12,7 @@
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
     description = Create records, store and request the digital product in the PDS registry
-    version = 0.2
+    version = 0.3
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
@@ -36,13 +36,13 @@
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
     description = harvest pds4 label to store them in registry
-    version = 3.2
+    version = 3.3
 
 [submodule "pds-registry-mgr-elastic"]
     path = registry
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
-    version = 3.2
+    version = 4.0
 
 [submodule "transform"]
     path = transform
