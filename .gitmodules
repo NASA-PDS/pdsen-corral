@@ -32,9 +32,9 @@
     description = harvest pds4 label to store them in registry
     version = 3.2
 
-[submodule "registry"]
-    path = registry
-    url = https://github.com/NASA-PDS/registry/
+[submodule "registry-mgr-solr"]
+    path = registry-mgr
+    url = https://github.com/NASA-PDS/pds-registry-mgr-solr
     description = service of registry for pds artifacts
     version = 3.2
 
