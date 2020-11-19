@@ -32,10 +32,11 @@
     url = https://github.com/NASA-PDS/harvest/
     version = 3.2
 
-[submodule "registry"]
+[submodule "pds-registry-mgr-elastic"]
     path = registry
-    url = https://github.com/NASA-PDS/registry/
-    version = 3.2
+    url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
+    description = service of registry for pds artifacts
+    version = 4.0
 
 [submodule "transform"]
     path = transform
