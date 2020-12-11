@@ -12,7 +12,7 @@
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
     description = Create records, store and request the digital product in the PDS registry
-    version = 0.3
+    version = 0.2
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
