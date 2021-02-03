@@ -17,8 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: my-org/my-tools
-        ref: gh-pages
+        repository: NASA-PDS/nasa-pds.github.io
+        ref: master
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
