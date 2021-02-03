@@ -37,14 +37,14 @@ jobs:
         git add .
         echo $(git commit -a -m 'automated gh-pages update from pdsen-corral')
     - name: Install dependencies
-        run: |
-          pip install -r build/requirements.txt
+      run: |
+        pip install -r build/requirements.txt
     - name: Make Sphinx
-        id: make
-        run: |
-          cd docs
-          make github
-          cd ..
+      id: make
+      run: |
+        cd docs
+        make github
+        cd ..
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
