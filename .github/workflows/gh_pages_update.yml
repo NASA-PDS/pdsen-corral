@@ -20,6 +20,7 @@ jobs:
         repository: NASA-PDS/nasa-pds.github.io
         ref: master
         persist-credentials: false # otherwise same credential are used when we push later on
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
@@ -35,6 +36,15 @@ jobs:
         git pull
         git add .
         echo $(git commit -a -m 'automated gh-pages update from pdsen-corral')
+    - name: Install dependencies
+        run: |
+          pip install -r build/requirements.txt
+    - name: Make Sphinx
+        id: make
+        run: |
+          cd docs
+          make github
+          cd ..
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
