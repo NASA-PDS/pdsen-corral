@@ -19,6 +19,7 @@ jobs:
       with:
         repository: NASA-PDS/nasa-pds.github.io
         ref: master
+        persist-credentials: false # otherwise same credential are used when we push later on
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
@@ -26,7 +27,7 @@ jobs:
     - name: deploy util script
       run: |
         pip install pds_github_util
-        summaries --token ${{ secrets.GITHUB_TOKEN }} --format rst --path ./docs/source/releases/
+        summaries --token ${{ secrets.ADMIN_GITHUB_TOKEN }} --format rst --path ./docs/source/releases/
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
