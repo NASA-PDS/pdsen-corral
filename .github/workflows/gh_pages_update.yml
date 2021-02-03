@@ -37,5 +37,6 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
+        repository: NASA-PDS/nasa-pds.github.io
         branch: master
         github_token: ${{ secrets.GITHUB_TOKEN }}
