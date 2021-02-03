@@ -18,6 +18,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         lfs: true
+        repository: NASA-PDS/nasa-pds.github.io
         ref: gh-pages
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
@@ -26,14 +27,14 @@ jobs:
     - name: deploy util script
       run: |
         pip install pds_github_util
-        summaries --token ${{ secrets.GITHUB_TOKEN }}
+        summaries --token ${{ secrets.GITHUB_TOKEN }} --format rst --path ./docs/source/releases/
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git pull
         git add .
-        echo $(git commit -a -m 'automated gh-pages update')
+        echo $(git commit -a -m 'automated gh-pages update from pdsen-corral')
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
