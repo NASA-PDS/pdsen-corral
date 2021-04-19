@@ -10,7 +10,7 @@
 [submodule "pds-registry-app"]
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
-    version = 0.1
+    version = 0.4
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
@@ -20,7 +20,7 @@
 [submodule "validate"]
     path = validate
     url = https://github.com/NASA-PDS/validate/
-    version = 1.23
+    version = 2.1
 
 [submodule "pds4-information-model"]
     path = pds4-information-model
@@ -30,13 +30,13 @@
 [submodule "harvest"]
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
-    version = 3.3
+    version = 3.5
 
 [submodule "pds-registry-mgr-elastic"]
-    path = registry
+    path = pds-registry-mgr-elastic
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
-    version = 4.1
+    version = 4.2
 
 [submodule "transform"]
     path = transform
@@ -46,7 +46,7 @@
 [submodule "pds4-jparser"]
     path = pds4-jparser
     url = https://github.com/NASA-PDS/pds4-jparser/
-    version = 1.9
+    version = 2.1
 
 [submodule "mi-label"]
     path = mi-label
