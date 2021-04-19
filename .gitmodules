@@ -44,7 +44,7 @@
 
 [submodule "registry-api-service"]
     path = registry-api-service
-    url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
+    url = https://github.com/NASA-PDS/registry-api-service/
     version = 0.1
 
 [submodule "transform"]
