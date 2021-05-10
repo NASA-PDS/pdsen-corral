@@ -32,8 +32,7 @@
     version = 2.0
     type = tool
 
-[submodule "pds4-information-model"]
-    path = pds4-information-model
+[submodule "pds4-information-model & ldd-tool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
     version = 12.1
     type = core
