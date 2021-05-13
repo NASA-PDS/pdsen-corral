@@ -6,7 +6,7 @@
     url = https://github.com/NASA-PDS/pds-registry-app/
     description = Create records, store and request the digital product in the PDS registry
     version = 0.1
-    type = core
+    type = service
 
 [submodule "pds-deep-archive"]
     url = https://github.com/NASA-PDS/pds-deep-archive
@@ -24,19 +24,19 @@
     url = https://github.com/NASA-PDS/pds4-information-model/
     description = PDS4 information model and tools for its maintenance
     version = 11.3
-    type = core
+    type = tool
 
 [submodule "harvest"]
     url = https://github.com/NASA-PDS/harvest/
     description = harvest pds4 label to store them in registry
     version = 3.2
-    type = other
+    type = core
 
 [submodule "registry-mgr-solr"]
     url = https://github.com/NASA-PDS/pds-registry-mgr-solr
     description = service of registry for pds artifacts
     version = 3.2
-    type = other
+    type = core
 
 [submodule "transform"]
     url = https://github.com/NASA-PDS/transform/
