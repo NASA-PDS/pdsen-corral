@@ -10,7 +10,7 @@
 [submodule "pds-registry-app"]
     url = https://github.com/NASA-PDS/pds-registry-app/
     version = 0.4
-    type = core
+    type = service
 
 [submodule "pds-deep-archive"]
     url = https://github.com/NASA-PDS/pds-deep-archive
@@ -25,18 +25,18 @@
 [submodule "pds4-information-model & ldd-tool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
     version = 13.1
-    type = core
+    type = tool
 
 [submodule "harvest"]
     url = https://github.com/NASA-PDS/harvest/
     version = 3.5
-    type = other
+    type = core
 
 [submodule "pds-registry-mgr-elastic"]
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
     version = 4.2
-    type = other
+    type = core
 
 [submodule "transform"]
     url = https://github.com/NASA-PDS/transform/
