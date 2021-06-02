@@ -12,13 +12,13 @@
     path = pds-doi-ui
     url = https://github.com/NASA-PDS/pds-doi-ui/
     version = 0.3
-    type = other
+    type = core
 
 [submodule "pds-registry-app"]
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
     version = 0.3
-    type = core
+    type = service
 
 [submodule "pds-deep-archive"]
     path = pds-deep-archive
@@ -35,25 +35,25 @@
 [submodule "pds4-information-model & ldd-tool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
     version = 12.1
-    type = core
+    type = tool
 
 [submodule "harvest"]
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
     version = 3.4
-    type = other
+    type = core
 
 [submodule "pds-registry-mgr-elastic"]
     path = registry
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     version = 4.1
-    type = other
+    type = core
 
 [submodule "registry-api-service"]
     path = registry-api-service
     url = https://github.com/NASA-PDS/registry-api-service/
     version = 0.1
-    type = other
+    type = core
 
 [submodule "transform"]
     path = transform
