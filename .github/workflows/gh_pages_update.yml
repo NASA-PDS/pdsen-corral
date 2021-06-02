@@ -39,7 +39,7 @@ jobs:
         echo $(git commit -a -m 'automated gh-pages update from pdsen-corral')
     - name: Install dependencies
       run: |
-        pip install -r build/requirements.txt
+        pip install -r requirements.txt
     - name: Make Sphinx
       id: make
       run: |
