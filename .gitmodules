@@ -10,7 +10,7 @@
 
 [submodule "PDS Deep Archive"]
     url = https://github.com/NASA-PDS/pds-deep-archive
-    description = Archive PDS products with OAIS standards to NSSDCA
+    description = PDS Discipline Node-specific package providing utilities for handling deep archives. It includes software for Archive Information Package (AIP) and Submission Information Package (SIP) products, based on Open Archival Information System (OAIS) standards.
     version = 0.1
     type = tool
 
