@@ -2,61 +2,61 @@
     version = 11.0
     release = 2020-12-31
 
-[submodule "pds-doi-service"]
+[submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/pds-doi-service/
     description = Manage DOIs
     version = 1.0
     type = core
 
-[submodule "pds-registry-app"]
+[submodule "PDS Registry App"]
     url = https://github.com/NASA-PDS/pds-registry-app/
     description = Create records, store and request the digital product in the PDS registry
     version = 0.2
     type = service
 
-[submodule "pds-deep-archive"]
+[submodule "PDS Deep Archive"]
     url = https://github.com/NASA-PDS/pds-deep-archive
-    description = Archive PDS products with OAIS standards to NSSDCA
+    description = PDS Discipline Node-specific package providing utilities for handling deep archives. It includes software for Archive Information Package (AIP) and Submission Information Package (SIP) products, based on Open Archival Information System (OAIS) standards.
     version = 0.2
     type = tool
 
-[submodule "validate"]
+[submodule "Validate"]
     url = https://github.com/NASA-PDS/validate/
     description = Validate PDS formats
     version = 1.24
     type = tool
 
-[submodule "pds4-information-model & ldd-tool"]
+[submodule "PDS4 Information Model & LDDTool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
     description = PDS4 information model and tools for its maintenance
     version = 12.0
     type = tool
 
-[submodule "harvest"]
+[submodule "Harvest"]
     url = https://github.com/NASA-PDS/harvest/
     description = harvest pds4 label to store them in registry
     version = 3.3
     type = core
 
-[submodule "pds-registry-mgr-elastic"]
+[submodule "PDS Registry Manager Elastic"]
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
     version = 4.0
     type = core
 
-[submodule "transform"]
+[submodule "Transform Tool"]
     url = https://github.com/NASA-PDS/transform/
     description = transform PDS3 and PDS4 into various format
     version = 1.11
     type = tool
 
-[submodule "pds4-jparser"]
+[submodule "PDS4 JParser"]
     url = https://github.com/NASA-PDS/pds4-jparser/
     description = java api library to read pds4 products
     version = 1.9
     type = library
 
-[submodule "mi-label"]
+[submodule "MILabel"]
     url = https://github.com/NASA-PDS/mi-label/
     description = metadata injector for PDS labels
     version = 1.1
