@@ -65,7 +65,7 @@
     path = pds4-jparser
     url = https://github.com/NASA-PDS/pds4-jparser/
     version = 2.1
-    type = library
+    type = tool
 
 [submodule "mi-label"]
     path = mi-label
