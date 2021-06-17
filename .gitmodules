@@ -2,72 +2,72 @@
     version = 11.1
     release = 2021-04-30
 
-[submodule "pds-doi-service"]
+[submodule "PDS DOI Service"]
     path = pds-doi-service
     url = https://github.com/NASA-PDS/pds-doi-service/
     version = 1.1
     type = core
 
-[submodule "pds-doi-ui"]
+[submodule "PDS DOI User Interface"]
     path = pds-doi-ui
     url = https://github.com/NASA-PDS/pds-doi-ui/
     version = 0.3
     type = other
 
-[submodule "pds-registry-app"]
+[submodule "PDS Registry App"]
     path = pds-registry-app
     url = https://github.com/NASA-PDS/pds-registry-app/
     version = 0.3
     type = service
 
-[submodule "pds-deep-archive"]
+[submodule "PDS Deep Archive"]
     path = pds-deep-archive
     url = https://github.com/NASA-PDS/pds-deep-archive
     version = 0.4
     type = tool
 
-[submodule "validate"]
+[submodule "Validate"]
     path = validate
     url = https://github.com/NASA-PDS/validate/
     version = 2.0
     type = tool
 
-[submodule "pds4-information-model & ldd-tool"]
+[submodule "PDS4 Information Model & LDDTool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
     version = 12.1
     type = tool
 
-[submodule "harvest"]
+[submodule "Harvest"]
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
     version = 3.4
     type = other
 
-[submodule "pds-registry-mgr-elastic"]
+[submodule "PDS Registry Manager Elastic"]
     path = registry
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     version = 4.1
     type = other
 
-[submodule "registry-api-service"]
+[submodule "Registry API Service"]
     path = registry-api-service
     url = https://github.com/NASA-PDS/registry-api-service/
     version = 0.1
     type = other
 
-[submodule "transform"]
+[submodule "Transform"]
     path = transform
     url = https://github.com/NASA-PDS/transform/
     version = 1.11
     type = tool
 
-[submodule "pds4-jparser"]
+[submodule "PDS4 JParser"]
     path = pds4-jparser
     url = https://github.com/NASA-PDS/pds4-jparser/
     version = 2.1
     type = tool
 
-[submodule "mi-label"]
+[submodule "MILabel"]
     path = mi-label
     url = https://github.com/NASA-PDS/mi-label/
     version = 1.1
