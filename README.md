@@ -19,7 +19,7 @@ The details on how these pages are generated is given after. It requires:
 
 ### Development build
 
-Current development build (ie until beginning of UIT phase) is described on the **master** branch.
+Current development build (ie until beginning of UIT phase) is described on the **main** branch.
 
 `.gitmodule` file must have a version containing 'SNAPSHOT', for example:
 
@@ -78,18 +78,18 @@ The component needs a secret 'ADMIN_GITHUB_TOKEN' which value is a github person
 See examples of continuous integration implementation. Use them to initiate new repository:
 
 For the **development** releases:
-- python project: https://github.com/NASA-PDS/pds-doi-service/blob/master/.github/workflows/release-latest.yml
-- java project: https://github.com/NASA-PDS/validate/blob/master/.github/workflows/snapshot-maven.yml
+- python project: https://github.com/NASA-PDS/pds-doi-service/blob/main/.github/workflows/release-latest.yml
+- java project: https://github.com/NASA-PDS/validate/blob/main/.github/workflows/snapshot-maven.yml
 
 For **stable** release:
-- java project: https://github.com/tloubrieu-jpl/harvest/blob/master/.github/workflows/release.yml
+- java project: https://github.com/tloubrieu-jpl/harvest/blob/main/.github/workflows/release.yml
 - python project: To Be Provided
 
 ### Everyday updates
 
 #### Development or snapshot
 
-The development or snapshot work is committed and pushed in the *master* branch of the repositories.
+The development or snapshot work is committed and pushed in the *main* branch of the repositories.
 
 The github actions will publish the release files and update the local reports (changelog, requirements).
 The github action will also trigger the generation of the gh-pages on pdsen-corral to reflect the latest updates.
