@@ -18,6 +18,11 @@
     version = 0.4
     type = service
 
+[submodule "PDS API Client"]
+    url = https://github.com/NASA-PDS/pds-api-client
+    version = 0.6
+    type = tool
+
 [submodule "PDS Deep Archive"]
     url = https://github.com/NASA-PDS/pds-deep-archive
     version = 1.1
