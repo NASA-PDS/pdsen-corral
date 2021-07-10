@@ -12,7 +12,7 @@
     path = pds-doi-ui
     url = https://github.com/NASA-PDS/pds-doi-ui/
     version = 0.3
-    type = other
+    type = core
 
 [submodule "PDS Registry App"]
     path = pds-registry-app
@@ -41,7 +41,7 @@
     path = harvest
     url = https://github.com/NASA-PDS/harvest/
     version = 3.4
-    type = other
+    type = core
 
 [submodule "PDS Registry Manager Elastic"]
     path = registry
@@ -53,7 +53,7 @@
     path = registry-api-service
     url = https://github.com/NASA-PDS/registry-api-service/
     version = 0.1
-    type = other
+    type = core
 
 [submodule "Transform"]
     path = transform
@@ -65,7 +65,7 @@
     path = pds4-jparser
     url = https://github.com/NASA-PDS/pds4-jparser/
     version = 2.1
-    type = tool
+    type = library
 
 [submodule "MILabel"]
     path = mi-label
