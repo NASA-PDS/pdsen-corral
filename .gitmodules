@@ -64,7 +64,7 @@
 [submodule "PDS4 JParser"]
     path = pds4-jparser
     url = https://github.com/NASA-PDS/pds4-jparser/
-    version = 2.1
+    version = 2.0
     type = library
 
 [submodule "MILabel"]
