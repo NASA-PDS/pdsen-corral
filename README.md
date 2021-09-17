@@ -15,6 +15,14 @@ The details on how these pages are generated is given after. It requires:
 - to reference the components in the **psden-corral** repository
 
 
+## 👥 Contributing
+
+Within the NASA Planetary Data System, we value the health of our community as much as the code. Towards that end, we ask that you read and practice what's described in these documents:
+
+-   Our [contributor's guide](https://github.com/NASA-PDS/.github/blob/main/CONTRIBUTING.md) delineates the kinds of contributions we accept.
+-   Our [code of conduct](https://github.com/NASA-PDS/.github/blob/main/CODE_OF_CONDUCT.md) outlines the standards of behavior we practice and expect by everyone who participates with our software.
+
+
 ## In the pdsen-corral Repository
 
 This section describes the composition of the `pdsen-corral` repository.
