@@ -1,5 +1,5 @@
 [submodule "."]
-    version = 12.0
+    version = 12.1-SNAPSHOT
     release = 2021-12-31
 
 [submodule "PDS DOI Service"]
