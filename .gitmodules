@@ -47,7 +47,7 @@
     path = registry
     url = https://github.com/NASA-PDS/registry-mgr/
     version = 4.1
-    type = other
+    type = core
 
 [submodule "Registry API Service"]
     path = registry-api-service
