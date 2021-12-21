@@ -48,7 +48,7 @@
     url = https://github.com/NASA-PDS/pds4-jparser/
     description = java api library to read pds4 products
     version = 1.8
-    type = library
+    type = other
 
 [submodule "MILabel"]
     url = https://github.com/NASA-PDS/mi-label/
