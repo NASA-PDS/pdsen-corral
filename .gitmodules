@@ -4,13 +4,13 @@
 
 [submodule "PDS DOI Service"]
     path = pds-doi-service
-    url = https://github.com/NASA-PDS/pds-doi-service/
+    url = https://github.com/NASA-PDS/doi-service/
     version = 1.1
     type = core
 
 [submodule "PDS DOI User Interface"]
     path = pds-doi-ui
-    url = https://github.com/NASA-PDS/pds-doi-ui/
+    url = https://github.com/NASA-PDS/doi-ui/
     version = 0.3
     type = core
 
@@ -22,7 +22,7 @@
 
 [submodule "PDS Deep Archive"]
     path = pds-deep-archive
-    url = https://github.com/NASA-PDS/pds-deep-archive
+    url = https://github.com/NASA-PDS/deep-archive
     version = 0.4
     type = tool
 
@@ -45,7 +45,7 @@
 
 [submodule "PDS Registry Manager Elastic"]
     path = registry
-    url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
+    url = https://github.com/NASA-PDS/registry-mgr/
     version = 4.1
     type = other
 
