@@ -9,7 +9,7 @@
     type = service
 
 [submodule "PDS Deep Archive"]
-    url = https://github.com/NASA-PDS/pds-deep-archive
+    url = https://github.com/NASA-PDS/deep-archive
     description = PDS Discipline Node-specific package providing utilities for handling deep archives. It includes software for Archive Information Package (AIP) and Submission Information Package (SIP) products, based on Open Archival Information System (OAIS) standards.
     version = 0.1
     type = service
