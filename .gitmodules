@@ -3,7 +3,7 @@
     release = 2021-12-31
 
 [submodule "PDS DOI Service"]
-    url = https://github.com/NASA-PDS/pds-doi-service/
+    url = https://github.com/NASA-PDS/doi-service/
     version = 2.1
     type = core
 
@@ -15,10 +15,10 @@
 [submodule "PDS API Client"]
     url = https://github.com/NASA-PDS/pds-api-client
     version = 0.7
-    type = tool
+    type = library
 
 [submodule "PDS Deep Archive"]
-    url = https://github.com/NASA-PDS/pds-deep-archive
+    url = https://github.com/NASA-PDS/deep-archive
     version = 1.1
     type = tool
 
@@ -38,7 +38,7 @@
     type = core
 
 [submodule "PDS Registry Manager Elastic"]
-    url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
+    url = https://github.com/NASA-PDS/registry-mgr/
     description = service of registry for pds artifacts
     version = 4.3
     type = core
