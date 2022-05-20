@@ -56,9 +56,10 @@ jobs:
         branch: pdsen-corral
         github_token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
     - name: Merge pdsen-corral -> main
-      uses: devmasx/merge-branch@master
+      uses: NASA-PDS/merge-branch@main
       with:
         type: now
+        github_repository: NASA-PDS/nasa-pds.github.io
         from_branch: pdsen-corral
         target_branch: main
         github_token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
