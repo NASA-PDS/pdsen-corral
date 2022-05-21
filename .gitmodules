@@ -40,12 +40,12 @@
 [submodule "Registry Harvest"]
     url = https://github.com/NASA-PDS/harvest/
     version = 3.6
-    type = core
+    type = service
 
 [submodule "Registry Manager"]
     url = https://github.com/NASA-PDS/registry-mgr/
     version = 4.4
-    type = core
+    type = service
 
 [submodule "Registry Common"]
     url = https://github.com/NASA-PDS/registry-common/
@@ -55,22 +55,22 @@
 [submodule "Registry Loader"]
     url = https://github.com/NASA-PDS/registry-loader/
     version = 0.2
-    type = tool
+    type = service
 
 [submodule "Registry Harvest Service"]
     url = https://github.com/NASA-PDS/registry-harvest-service/
     version = 1.0
-    type = core
+    type = service
 
 [submodule "Registry Crawler Service"]
     url = https://github.com/NASA-PDS/registry-crawler-service/
     version = 1.0
-    type = core
+    type = service
 
 [submodule "Registry Harvest Client"]
     url = https://github.com/NASA-PDS/registry-harvest-cli/
     version = 1.0
-    type = core
+    type = service
 
 [submodule "Registry API"]
     url = https://github.com/NASA-PDS/registry-api/
@@ -105,7 +105,7 @@
 [submodule "Feedback Widget"]
     url = https://github.com/NASA-PDS/feedback-widget/
     version = 1.3
-    type = tool
+    type = service
 
 
 
