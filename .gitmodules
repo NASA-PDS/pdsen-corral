@@ -107,6 +107,11 @@
     version = 1.3
     type = service
 
+[submodule "PDS API"]
+    url = https://github.com/NASA-PDS/pds-api/
+    version = 12.1
+    type = library
+
 
 
 
