@@ -1,6 +1,6 @@
 [submodule "."]
-    version = 12.1-SNAPSHOT
-    release = 2021-12-31
+    version = 13.1
+    release = 2023-06-30
 
 [submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/pds-doi-service/
@@ -12,11 +12,6 @@
     url = https://github.com/NASA-PDS/pds-doi-ui/
     version = 0.4
     type = core
-
-[submodule "PDS Registry App"]
-    url = https://github.com/NASA-PDS/pds-registry-app/
-    version = 1.0
-    type = service
 
 [submodule "PDS API Client"]
     url = https://github.com/NASA-PDS/pds-api-client
@@ -35,18 +30,18 @@
 
 [submodule "PDS4 Information Model & LDDTool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
-    version = 13.1
+    version = 14.2
     type = tool
 
-[submodule "Harvest"]
+[submodule "Registry Harvest"]
     url = https://github.com/NASA-PDS/harvest/
-    version = 3.5
+    version = 3.7
     type = core
 
-[submodule "PDS Registry Manager Elastic"]
+[submodule "Registry Manager"]
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
-    version = 4.2
+    version = 4.5
     type = core
 
 [submodule "Transform"]
@@ -68,8 +63,6 @@
     url = https://github.com/NASA-PDS/PLAID
     version =
     type = tool
-
-
 
 
 
