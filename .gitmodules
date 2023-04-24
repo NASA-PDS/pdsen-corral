@@ -24,12 +24,12 @@
 
 [submodule "PDS Deep Archive"]
     url = https://github.com/NASA-PDS/deep-archive/
-    version = 1.1.2-dev
+    version = 1.1
     type = tool
 
 [submodule "Validate"]
     url = https://github.com/NASA-PDS/validate/
-    version = 3.2.0-SNAPSHOT
+    version = 3.2
     type = tool
 
 [submodule "PDS4 Information Model & LDDTool"]
@@ -69,17 +69,17 @@
 
 [submodule "Registry Harvest Client"]
     url = https://github.com/NASA-PDS/registry-harvest-cli/
-    version = 1.2.0-SNAPSHOT
+    version = 1.0
     type = service
 
 [submodule "Registry API"]
     url = https://github.com/NASA-PDS/registry-api/
-    version = 1.2.0-SNAPSHOT
+    version = 1.2
     type = core
 
 [submodule "Registry"]
     url = https://github.com/NASA-PDS/registry/
-    version = 1.2.0-dev
+    version = 1.2
     type = core
 
 [submodule "PDS APIs specification/docs"]
@@ -89,7 +89,7 @@
 
 [submodule "PDS4 JParser"]
     url = https://github.com/NASA-PDS/pds4-jparser/
-    version = 2.5.0-SNAPSHOT
+    version = 2.5
     type = library
 
 [submodule "MILabel"]
