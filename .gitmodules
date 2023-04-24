@@ -1,6 +1,6 @@
 [submodule "."]
-    version = 13.0-SNAPSHOT
-    release = 2022-12-31
+    version = 14.0-SNAPSHOT
+    release = 2023-12-31
 
 [submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/pds-doi-service/
