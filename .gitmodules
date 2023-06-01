@@ -4,22 +4,22 @@
 
 [submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/doi-service/
-    version = 2.4.0-dev
+    version = 2.3
     type = core
 
 [submodule "PDS DOI User Interface"]
     url = https://github.com/NASA-PDS/doi-ui/
-    version = 1.1
+    version = 1.2
     type = core
 
 [submodule "PDS WDS React"]
     url = https://github.com/NASA-PDS/wds-react/
-    version = 0.1
+    version = 0.2
     type = core
 
 [submodule "PDS API Client"]
     url = https://github.com/NASA-PDS/pds-api-client/
-    version = 1.1
+    version = 2.0
     type = tool
 
 [submodule "PDS Deep Archive"]
@@ -40,12 +40,12 @@
 [submodule "Registry Harvest"]
     url = https://github.com/NASA-PDS/harvest/
     version = 3.7
-    type = service
+    type = tool
 
 [submodule "Registry Manager"]
     url = https://github.com/NASA-PDS/registry-mgr/
     version = 4.5
-    type = service
+    type = tool
 
 [submodule "Registry Common"]
     url = https://github.com/NASA-PDS/registry-common/
@@ -84,7 +84,7 @@
 
 [submodule "PDS APIs specification/docs"]
     url = https://github.com/NASA-PDS/pds-api/
-    version = 1.2.0-dev
+    version = 13.1
     type = library
 
 [submodule "PDS4 JParser"]
@@ -112,6 +112,10 @@
     version = 1.3
     type = service
 
+[submodule "Nucleus"]
+    url = https://github.com/NASA-PDS/nucleus/
+    version = 0.1
+    type = core
 
 
 
