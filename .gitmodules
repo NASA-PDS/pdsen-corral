@@ -1,6 +1,6 @@
 [submodule "."]
-    version = 14.0
-    release = 2023-12-31
+    version = 14.1-SNAPSHOT
+    release = 2024-06-01
 
 [submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/pds-doi-service/
@@ -25,12 +25,12 @@
 
 [submodule "Validate"]
     url = https://github.com/NASA-PDS/validate/
-    version = 3.3
+    version = 3.3.0
     type = tool
 
 [submodule "PDS4 Information Model & LDDTool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
-    version = 14.3
+    version = 14.4.0-SNAPSHOT
     type = tool
 
 [submodule "Harvest"]
