@@ -1,6 +1,6 @@
 [submodule "."]
-    version = 14.0
-    release = 2023-12-31
+    version = 14.1
+    release = 2024-06-30
 
 [submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/doi-service/
@@ -25,7 +25,7 @@
 
 [submodule "Validate"]
     url = https://github.com/NASA-PDS/validate/
-    version = 3.3
+    version = 3.5
     type = tool
 
 [submodule "PDS4 Information Model & LDDTool"]
@@ -51,7 +51,7 @@
 
 [submodule "PDS4 JParser"]
     url = https://github.com/NASA-PDS/pds4-jparser/
-    version = 2.6
+    version = 2.8
     type = library
 
 [submodule "MILabel"]
@@ -104,7 +104,7 @@
 
 [submodule "data-upload-manager"]
     url = https://github.com/NASA-PDS/data-upload-manager
-    version = 0.3.0
+    version = 1.2.0
     type = tool
 
 
