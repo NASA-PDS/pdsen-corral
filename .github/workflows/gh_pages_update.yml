@@ -37,13 +37,6 @@ jobs:
       run: |
         pip install lasso.reports
         summaries --token ${{ secrets.ADMIN_GITHUB_TOKEN }} --format rst --path ./docs/source/releases/
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git pull
-        git add .
-        echo $(git commit -a -m 'automated gh-pages update from pdsen-corral')
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -53,7 +46,13 @@ jobs:
         cd docs
         make github
         cd ..
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git pull
         git add .
+        echo $(git commit -a -m 'automated gh-pages update from pdsen-corral')
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
