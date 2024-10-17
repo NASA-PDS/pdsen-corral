@@ -53,6 +53,7 @@ jobs:
         cd docs
         make github
         cd ..
+        git add .
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
