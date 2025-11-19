@@ -2,17 +2,8 @@ name: gh-pages updates
 
 on:
   push:
-    branches:
-      - main
-      - '10.1'
-      - '11.0'
-      - '11.1'
-      - '12.0'
-      - '12.1'
-      - '13.0'
-      - '13.1'
-      - '14.0'
-      - '14.1'
+    branches-ignore:
+      - gh-pages
 jobs:
   build:
     runs-on: ubuntu-latest
