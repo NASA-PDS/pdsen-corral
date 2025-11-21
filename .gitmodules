@@ -1,5 +1,5 @@
 [submodule "."]
-    version = 16.0
+    version = 16
     release = 2026-12-31
 
 [submodule "PDS DOI Service"]
@@ -31,7 +31,7 @@
 
 [submodule "Validate"]
     url = https://github.com/NASA-PDS/validate/
-    version = 4.1
+    version = 4.0
     type = tool
 
 [submodule "PDS4 Information Model & LDDTool"]
@@ -100,7 +100,7 @@
 
 [submodule "Registry"]
     url = https://github.com/NASA-PDS/registry
-    version = 1.5
+    version = 1.4
     type = core
 
 [submodule "PDS API"]
