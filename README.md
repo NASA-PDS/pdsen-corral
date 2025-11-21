@@ -30,7 +30,7 @@ This section describes the composition of the `pdsen-corral` repository.
 
 ### Development build
 
-Current development build (ie until beginning of UIT phase) is described on the **main** branch.
+Current development build (ie until beginning of IT phase) is described on the **main** branch.
 
 The `.gitmodule` file must have a version containing 'SNAPSHOT', for example:
 

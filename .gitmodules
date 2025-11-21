@@ -1,5 +1,5 @@
 [submodule "."]
-    version = 16.0-SNAPSHOT
+    version = 16.0
     release = 2026-12-31
 
 [submodule "PDS DOI Service"]
@@ -84,7 +84,7 @@
 
 [submodule "Registry Loader"]
     url = https://github.com/NASA-PDS/registry-loader
-    version = 1.2
+    version = 1.1
     type = tool
 
 
@@ -105,23 +105,23 @@
 
 [submodule "PDS API"]
     url = https://github.com/NASA-PDS/pds-api
-    version = 16.0
+    version = 15.1
     type = core
 
 [submodule "feedback-widget"]
     url = https://github.com/NASA-PDS/feedback-widget
-    version = 1.3.0
+    version = 1.3
     type = core
 
 [submodule "data-upload-manager"]
     url = https://github.com/NASA-PDS/data-upload-manager
-    version = 2.3
+    version = 2.2
     type = tool
 
 
 [submodule "nucleus"]
     url = https://github.com/NASA-PDS/nucleus
-    version = 1.0.0
+    version = 1.0
     type = core
 
 
