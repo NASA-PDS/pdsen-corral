@@ -1,6 +1,6 @@
 [submodule "."]
-    version = 16.0-SNAPSHOT
-    release = 2026-12-31
+    version = 17.0
+    release = 2026-06-30
 
 [submodule "PDS DOI Service"]
     url = https://github.com/NASA-PDS/doi-service/
@@ -15,7 +15,7 @@
 
 [submodule "peppi"]
     url = https://github.com/NASA-PDS/peppi
-    version = 0.8
+    version = 0.9
     type = tool
 
 
@@ -26,7 +26,7 @@
 
 [submodule "PDS Deep Archive"]
     url = https://github.com/NASA-PDS/deep-archive
-    version = 1.5
+    version = 2.2
     type = tool
 
 [submodule "Validate"]
@@ -36,18 +36,18 @@
 
 [submodule "PDS4 Information Model & LDDTool"]
     url = https://github.com/NASA-PDS/pds4-information-model/
-    version = 16.0
+    version = 16.1
     type = tool
 
 [submodule "Harvest"]
     url = https://github.com/NASA-PDS/harvest/
-    version = 5.0
+    version = 5.1
     type = core
 
 [submodule "Registry Manager"]
     url = https://github.com/NASA-PDS/pds-registry-mgr-elastic/
     description = service of registry for pds artifacts
-    version = 6.0
+    version = 6.1
     type = core
 
 [submodule "Registry Client"]
@@ -58,17 +58,17 @@
 
 [submodule "Transform"]
     url = https://github.com/NASA-PDS/transform/
-    version = 1.11
+    version = 1.13
     type = tool
 
 [submodule "PDS4 JParser"]
     url = https://github.com/NASA-PDS/pds4-jparser/
-    version = 3.0
+    version = 3.1
     type = library
 
 [submodule "MILabel"]
     url = https://github.com/NASA-PDS/mi-label/
-    version = 1.3
+    version = 1.5
     type = tool
 
 [submodule "PLAID"]
@@ -78,7 +78,7 @@
 
 [submodule "Registry Common"]
     url = https://github.com/NASA-PDS/registry-common
-    version = 2.3
+    version = 2.4
     type = library
 
 
@@ -90,7 +90,7 @@
 
 [submodule "Registry Sweepers"]
     url = https://github.com/NASA-PDS/registry-sweepers
-    version = 1.5
+    version = 1.6
     type = core
 
 [submodule "Registry API"]
@@ -100,7 +100,7 @@
 
 [submodule "Registry"]
     url = https://github.com/NASA-PDS/registry
-    version = 1.5
+    version = 1.6
     type = core
 
 [submodule "PDS API"]
@@ -115,13 +115,13 @@
 
 [submodule "data-upload-manager"]
     url = https://github.com/NASA-PDS/data-upload-manager
-    version = 2.3
+    version = 2.5
     type = tool
 
 
 [submodule "nucleus"]
     url = https://github.com/NASA-PDS/nucleus
-    version = 1.0.0
+    version = 1.1.0
     type = core
 
 
