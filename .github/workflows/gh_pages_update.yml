@@ -15,7 +15,7 @@ jobs:
         python-version: [3.13]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         repository: NASA-PDS/nasa-pds.github.io
         ref: main
